@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>张国凤 · 软件测试工程师 | AI驱动测试专家</title>
+    <!-- Google Fonts & 重置 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f1f5f9;
+            font-family: 'Inter', sans-serif;
+            color: #0f172a;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .resume-card {
+            background: #ffffff;
+            border-radius: 2rem;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0f2b3d 0%, #1b4a6e 100%);
+            padding: 2.5rem 2.5rem 2rem 2.5rem;
+            color: white;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-tagline {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(4px);
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        .hero-title {
+            font-size: 1.3rem;
+            font-weight: 500;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            background: rgba(255,255,255,0.08);
+            border-radius: 1.5rem;
+            padding: 1rem 1.8rem;
+            backdrop-filter: blur(8px);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            justify-content: center;
+        }
+
+        .contact-info a, .contact-info span {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.2s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 0.9fr;
+            gap: 2rem;
+            padding: 2.5rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f2b3d;
+            border-left: 5px solid #1b6b8f;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .section-title i {
+            color: #1b6b8f;
+            font-size: 1.3rem;
+        }
+
+        .exp-item {
+            margin-bottom: 1.8rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1.2rem;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .exp-company {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #0f172a;
+        }
+
+        .exp-date {
+            font-size: 0.85rem;
+            color: #475569;
+            background: #f1f5f9;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+        }
+
+        .exp-role {
+            font-weight: 600;
+            color: #1b6b8f;
+            margin: 0.3rem 0 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .exp-desc {
+            font-size: 0.92rem;
+            color: #334155;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .exp-desc li {
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        .exp-desc li i {
+            color: #1b6b8f;
+            font-size: 0.8rem;
+            margin-top: 0.2rem;
+            width: 1rem;
+        }
+
+        .skills-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin: 1rem 0 1.2rem 0;
+        }
+
+        .skill-tag {
+            background: #eef2ff;
+            color: #1e3a5f;
+            padding: 0.35rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .skill-tag i {
+            margin-right: 0.3rem;
+            font-size: 0.8rem;
+        }
+
+        .skill-tag:hover {
+            background: #d9e6f2;
+            transform: scale(1.02);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: #f8fafc;
+            flex: 1;
+            text-align: center;
+            padding: 1rem 0.5rem;
+            border-radius: 1.2rem;
+            border: 1px solid #e2edf2;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1b6b8f;
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #475569;
+            font-weight: 500;
+        }
+
+        .trait-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .trait-item {
+            background: #f1f5f9;
+            border-radius: 2rem;
+            padding: 0.4rem 1.2rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1e293b;
+        }
+
+        .quote-text {
+            font-style: italic;
+            background: #fefce8;
+            padding: 1rem;
+            border-radius: 1rem;
+            border-left: 4px solid #eab308;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: #2d3e50;
+        }
+
+        .ai-showcase {
+            background: linear-gradient(110deg, #f0f9ff 0%, #e9f5f9 100%);
+            border-radius: 1.5rem;
+            padding: 1.2rem 1.5rem;
+            margin: 1rem 0 0.5rem 0;
+            border: 1px solid #cde3ed;
+        }
+
+        .ai-showcase h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #0f2b3d;
+        }
+
+        .ai-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .ai-list li {
+            display: flex;
+            gap: 0.8rem;
+            margin-bottom: 0.9rem;
+            font-size: 0.9rem;
+            align-items: flex-start;
+        }
+
+        .ai-list li i {
+            color: #1b6b8f;
+            font-size: 1rem;
+            margin-top: 0.15rem;
+            min-width: 1.2rem;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #cbd5e1, transparent);
+        }
+
+        @media (max-width: 880px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+                padding: 1.8rem;
+            }
+            .hero {
+                padding: 1.8rem;
+            }
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .contact-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.6rem;
+            }
+            .container {
+                margin: 1rem auto;
+            }
+            .stats {
+                flex-direction: row;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .stats {
+                flex-direction: column;
+            }
+            .hero-title {
+                font-size: 1rem;
+            }
+        }
+
+        footer {
+            background: #f1f5f9;
+            text-align: center;
+            padding: 1.2rem;
+            font-size: 0.8rem;
+            color: #475569;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .btn-ai-badge {
+            background: #0f172a;
+            color: white;
+            border-radius: 30px;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="resume-card">
+        <!-- 头部 hero 区域（姓名已更新为张国凤） -->
+        <div class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>张国凤 <span class="btn-ai-badge"><i class="fas fa-robot"></i> AI驱动测试</span></h1>
+                    <div class="hero-title">
+                        <i class="fas fa-vial"></i> 软件测试工程师
+                        <span class="hero-tagline"><i class="fas fa-briefcase"></i> 10.5年+ 全流程测试经验</span>
+                    </div>
+                    <p style="max-width: 500px; opacity: 0.9; margin-top: 0.5rem;">🔍 质量捍卫者 · 用户体验思维 · AI提效实战派</p>
+                </div>
+                <div class="contact-info">
+                    <span><i class="fas fa-map-marker-alt"></i> 深圳 / 重庆</span>
+                    <span><i class="fas fa-envelope"></i> zhangguofeng515@gmail.com</span>
+                    <span><i class="fab fa-github"></i> github.com/zhangguoqing</span>
+                    <span><i class="fas fa-phone-alt"></i> 13530633730</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 主体网格 -->
+        <div class="main-grid">
+            <!-- 左侧栏：工作经验 + 项目数据 + AI实战案例 -->
+            <div>
+                <!-- 工作经验 -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-briefcase"></i> 
+                        <span>工作经验</span>
+                    </div>
+                    
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="exp-company"><i class="fas fa-building"></i> 重庆预言机科技有限公司</span>
+                            <span class="exp-date"><i class="far fa-calendar-alt"></i> 2019.04 – 至今 (5年)</span>
+                        </div>
+                        <div class="exp-role">资深软件测试工程师</div>
+                        <ul class="exp-desc">
+                            <li><i class="fas fa-check-circle"></i> 负责公司核心业务平台全流程测试，累计主导20+大型项目版本迭代，保证0严重线上事故。</li>
+                            <li><i class="fas fa-check-circle"></i> 制定测试计划与策略，编写高质量测试用例，组织用例评审，测试文档覆盖率达100%。</li>
+                            <li><i class="fas fa-check-circle"></i> 率先引入AI工具（ChatGPT/Codex）优化回归测试、缺陷分析及自动化脚本，整体测试效率提升26%。</li>
+                            <li><i class="fas fa-check-circle"></i> 与产品、研发高效协作，推动Bug闭环，善于风险评估，确保项目按时高质量交付。</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="exp-company"><i class="fas fa-network-wired"></i> 深圳市帝盟网络科技有限公司</span>
+                            <span class="exp-date"><i class="far fa-calendar-alt"></i> 2016.01 – 2021.07 (5.5年)</span>
+                        </div>
+                        <div class="exp-role">软件测试工程师</div>
+                        <ul class="exp-desc">
+                            <li><i class="fas fa-check-circle"></i> 参与电商、SaaS等多领域项目测试，累计完成30+项目全生命周期测试，编写测试报告并推动质量改进。</li>
+                            <li><i class="fas fa-check-circle"></i> 负责功能测试、兼容性测试及用户体验测试，提出多项优化建议，提升产品易用性。</li>
+                            <li><i class="fas fa-check-circle"></i> 建立标准化测试用例库及缺陷跟踪流程，团队协作效率提高20%。</li>
+                            <li><i class="fas fa-check-circle"></i> 获得“季度质量之星”称号，善于沟通及风险预警，获得团队高度认可。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 项目统计 + 质量数据 -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-chart-line"></i>
+                        <span>测试影响力 · 关键数据</span>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-card">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">参与测试项目</div>
+                            <small style="color:#5b6e8c;">大小型项目全覆盖</small>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">10.5年</div>
+                            <div class="stat-label">测试领域经验</div>
+                            <small style="color:#5b6e8c;">深/渝两地深耕</small>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">交付通过率</div>
+                            <small style="color:#5b6e8c;">客户满意度高</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI提效实战案例 -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-microchip"></i>
+                        <span>AI提效 · 实战记录</span>
+                    </div>
+                    <div class="ai-showcase">
+                        <h4><i class="fas fa-bolt"></i> 将AI融入测试工作流，真实落地成果</h4>
+                        <ul class="ai-list">
+                            <li><i class="fas fa-code"></i> <strong>使用 Codex 修复APP实际Bug</strong> — 借助Codex分析崩溃日志并生成修复补丁，快速定位并解决线上偶发闪退问题，缩短修复时间40%。</li>
+                            <li><i class="fas fa-robot"></i> <strong>工作群机器人定时发送测试报告</strong> — 编写脚本对接钉钉/飞书群机器人，每日特定时刻自动推送规范化测试报告（通过率、遗留缺陷、风险点），提升团队信息透明度。</li>
+                            <li><i class="fas fa-pen-fancy"></i> <strong>AI辅助编写测试用例</strong> — 利用大语言模型根据PRD快速生成测试场景与边界用例，人工复核后复用，用例编写效率提升35%。</li>
+                            <li><i class="fas fa-globe"></i> <strong>AI制作个人介绍网站 & 生活小游戏</strong> — 借助Codex/ChatGPT从零搭建本简历网站，并开发趣味性H5小游戏用于团队团建，展现极客创造力。</li>
+                            <li><i class="fas fa-check-double"></i> <strong>Codex 编写Web端主流程自动化测试</strong> — 基于Playwright + Codex 自动生成核心业务场景的E2E脚本，覆盖登录-下单-支付全链路，节省手工编写脚本时间50%。</li>
+                        </ul>
+                        <div style="font-size:0.8rem; margin-top: 12px; color:#2c5a6e; border-top: 1px dashed #bdd9e6; padding-top: 8px;">
+                            <i class="fas fa-lightbulb"></i> 持续探索AI+测试融合，推进测试左移与智能质量工程
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧栏：技能 + 核心竞争力 + 综合素质 + 持续学习 -->
+            <div>
+                <!-- 专业技能模块 -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-code-branch"></i>
+                        <span>测试技能栈</span>
+                    </div>
+                    <div class="skills-box">
+                        <span class="skill-tag"><i class="fas fa-clipboard-list"></i> 功能测试</span>
+                        <span class="skill-tag"><i class="fas fa-chalkboard-user"></i> 测试计划/策略</span>
+                        <span class="skill-tag"><i class="fas fa-file-alt"></i> 测试用例设计</span>
+                        <span class="skill-tag"><i class="fas fa-bug"></i> 缺陷管理</span>
+                        <span class="skill-tag"><i class="fas fa-chart-simple"></i> 风险评估</span>
+                        <span class="skill-tag"><i class="fas fa-mobile-alt"></i> 用户体验测试</span>
+                        <span class="skill-tag"><i class="fas fa-robot"></i> AI辅助测试 (Codex/Copilot)</span>
+                        <span class="skill-tag"><i class="fas fa-file-signature"></i> 测试文档编写</span>
+                        <span class="skill-tag"><i class="fas fa-people-arrows"></i> 跨部门协作</span>
+                        <span class="skill-tag"><i class="fas fa-play"></i> 自动化测试(Playwright)</span>
+                    </div>
+                </div>
+
+                <!-- 核心竞争力 -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-gem"></i>
+                        <span>核心竞争力</span>
+                    </div>
+                    <div class="trait-list">
+                        <span class="trait-item"><i class="fas fa-comments"></i> 沟通达人</span>
+                        <span class="trait-item"><i class="fas fa-brain"></i> 思维活跃</span>
+                        <span class="trait-item"><i class="fas fa-heart"></i> 高度责任心</span>
+                        <span class="trait-item"><i class="fas fa-eye"></i> 用户体验思维</span>
+                        <span class="trait-item"><i class="fas fa-chart-line"></i> 项目风险评估</span>
+                        <span class="trait-item"><i class="fas fa-lightbulb"></i> 问题敏感度</span>
+                        <span class="trait-item"><i class="fas fa-users"></i> 团队意识强</span>
+                        <span class="trait-item"><i class="fas fa-rocket"></i> 快速学习能力</span>
+                        <span class="trait-item"><i class="fas fa-robot"></i> AI工程化思维</span>
+                    </div>
+                    <hr>
+                    <div style="background: linear-gradient(110deg, #f0f9ff 0%, #e9f5f9 100%); padding: 1rem; border-radius: 1.2rem; margin: 0.5rem 0;">
+                        <i class="fas fa-microchip" style="color:#1b6b8f; font-size: 1.3rem; float: left; margin-right: 12px;"></i>
+                        <strong style="font-size: 1rem;">🤖 AI测试创新先锋</strong><br>
+                        <span style="font-size: 0.85rem; color: #1e3a5f;">实战应用Codex修复缺陷、自动化脚本生成、群机器人集成报告推送，将AI深度嵌入测试生命周期。主导内部AI测试分享会，赋能团队效能升级。</span>
+                    </div>
+                </div>
+
+                <!-- 综合素质 + 自我评价 -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-user-check"></i>
+                        <span>综合素质 · 自我评价</span>
+                    </div>
+                    <div style="margin-bottom: 0.8rem;">
+                        <p style="margin-bottom: 0.5rem; font-weight: 500; background: #fef9e3; padding: 0.6rem 1rem; border-radius: 1rem;">
+                        <i class="fas fa-quote-left" style="margin-right: 6px; color:#d97706;"></i> 
+                        性格外向，逻辑清晰，思维严谨；拥有极强的适应力与抗压能力。5年半+5年的一线测试经验，沉淀出对质量的极致追求。
+                        </p>
+                    </div>
+                    <ul style="list-style: none; margin-top: 10px;">
+                        <li style="margin-bottom: 0.7rem; display: flex; gap: 0.7rem;"><i class="fas fa-check-circle" style="color:#1b6b8f;"></i> <span><strong>沟通协作</strong> — 善于跨团队沟通，推动问题高效解决，多次获得产品/研发好评。</span></li>
+                        <li style="margin-bottom: 0.7rem; display: flex; gap: 0.7rem;"><i class="fas fa-check-circle" style="color:#1b6b8f;"></i> <span><strong>质量意识</strong> — 从用户体验出发，关注细节和边界，主动进行风险预警与质量门禁。</span></li>
+                        <li style="margin-bottom: 0.7rem; display: flex; gap: 0.7rem;"><i class="fas fa-check-circle" style="color:#1b6b8f;"></i> <span><strong>领导力&适应力</strong> — 能快速进入新项目，指导新人测试工作，持续改进测试流程。</span></li>
+                        <li style="margin-bottom: 0.7rem; display: flex; gap: 0.7rem;"><i class="fas fa-check-circle" style="color:#1b6b8f;"></i> <span><strong>AI驱动测试思维</strong> — 将大模型、Codex等前沿技术落地到测试自动化、报告生成及缺陷分析，持续提效。</span></li>
+                    </ul>
+                    <div class="quote-text" style="background: #eef2ff; border-left-color: #1b6b8f;">
+                        <i class="fas fa-medal"></i>  「累计参与测试项目50+，覆盖金融、电商、企业服务等领域，坚信AI+测试是未来的核心生产力。」
+                    </div>
+                </div>
+
+                <!-- 持续学习 & 相关认证 -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>持续学习 · 专业认证</span>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
+                        <span style="background: #e2e8f0; border-radius: 40px; padding: 0.2rem 1rem; font-size: 0.8rem;">📘 ISTQB 基础认证(备考)</span>
+                        <span style="background: #e2e8f0; border-radius: 40px; padding: 0.2rem 1rem; font-size: 0.8rem;">🤖 AI Prompt Engineering 专项</span>
+                        <span style="background: #e2e8f0; border-radius: 40px; padding: 0.2rem 1rem; font-size: 0.8rem;">🐧 敏捷测试实战工作坊</span>
+                        <span style="background: #e2e8f0; border-radius: 40px; padding: 0.2rem 1rem; font-size: 0.8rem;">📊 数据分析与测试度量</span>
+                        <span style="background: #e2e8f0; border-radius: 40px; padding: 0.2rem 1rem; font-size: 0.8rem;">⚙️ Codex自动化工程实践</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <i class="fas fa-code"></i> 张国凤 · 软件测试工程师 | 用AI重新定义质量效能 | 在线简历 2026 | 联系: zhangguofeng515@gmail.com
+        </footer>
+    </div>
+</div>
+</body>
+</html>
